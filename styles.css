@@ -2,6 +2,7 @@
     --gray-950: rgb(17,17,17);
     --gray-500: rgb(107,107,107);
     --yellow: rgb(244,208,78);
+    --light-yellow: rgb(248, 230, 165);
     --white: rgb(255,255,255);
     --spacing-300: 24px;
     --spacing-150: 12px;
@@ -29,21 +30,22 @@ body {
 
 .attribution {
     position: fixed;
-    padding: 20px;
+    padding: 8px;
     bottom: 0;
     text-align: center;
     align-items: center;
     justify-items: center;
 }
 
-main {
+.blog-preview-card {
     display: flex;
     flex-direction: column;
     gap: var(--spacing-300);
-    height: 522px;
-    width: 384px;
+    max-width: 384px;
+    width: 100%;
+    border-radius: 20px;
     background-color: var(--white);
-    box-shadow: 8px 8px 0 0;
+    box-shadow: 8px 8px 0 rgba(0, 0, 0, 1);
     border-radius: 20px;
     border: 1px solid black;
     padding: 24px;
@@ -51,6 +53,7 @@ main {
 
 .button {
     background-color: var(--yellow);
+    border: 0;
     border-radius: 4px;
     padding: 12px 4px;
     display: flex;
@@ -58,6 +61,11 @@ main {
     align-items: center;
     width: 82px;
     height: 29px;
+}
+
+.button:hover {
+    cursor: pointer;
+    background-color: var(--light-yellow);
 }
 
 .main-content {
@@ -89,9 +97,15 @@ main {
     font-weight: 800;
 }
 
+.preset-1:hover {
+    cursor: pointer;
+    color: var(--yellow);
+}
+
 .preset-2 {
     font-size: 16px;
     font-weight: 400;
+    color: var(--gray-500);
 }
 
 .preset-3 {
